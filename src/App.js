@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Datacards from './components/datacards';
+import Insight from './components/insight';
+import { Navbar } from './components/navbar';
+import { useHomeContext } from './contexts/homeContext';
+const {state}=useHomeContext
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <section className='cardContainer'>
+{[1,2,2,2].map(( x, i)=><Datacards key={i}/>) }
+      </section>
+      <section className='dataDiv'>
+      <Insight/>
+
+      </section>
+      
     </div>
   );
 }
