@@ -1,12 +1,15 @@
 
-
-export const Homereducer=(state,action)=>{
+function Homereducer(state,action){
 switch(action.type){
-case('Load'):return{data:action.payload}
+
+case('LOAD'):
+return{...action.payload}
 default:
 
 }
+console.log(state)
 
 
 }
 
+export default Homereducer

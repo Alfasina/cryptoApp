@@ -1,12 +1,21 @@
-.app{
-  background-color: aliceblue;
+.App{
+  background-color: rgb(226, 229, 237);
+  
 }
 .card{
   background-color: aliceblue;
   border-radius: 6px;
+  flex-direction: column;
   width:22%;
-  color: #00008B;
+  padding-left:.6rem ;
+  color: #00008B; 
+}
+section{
+  border-radius: 1.5rem;
   
+}
+li{
+  list-style: none;
 }
 .cardContainer{
   display: flex;
@@ -18,22 +27,79 @@
 }
 .navBar{
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
-  padding-inline-start: 18px 2rem;
-  background-color: aqua;
+  padding: .7rem 3rem;
+}
+.navBar input{
+  width: 50%;
+  padding:.5rem;
+  border: none;
+  border-radius: .3rem;
 }
 .grey{
-  color:grey
+  color:grey;
+  margin:2px;
 }
 .active{
-  color:#00008B;
-  border-bottom: green;
+  color:#12129b;
+  border-bottom: green solid 3px;
+  font-weight: 700;
+  margin:2px;
+}
+.flowDiv{
+  display: flex;
+  margin: 2rem;
+}
+aside{flex-basis: 20%;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  gap: 2rem;
 }
 
 
 
 .btn{
-  box-shadow: rebeccapurple, blue, 0.5;
   margin: 2px;
+  border-radius: .4rem;
+  background-color: white;
+  border: none;
+  padding: .5rem;
+}
+.icon{
+  color:grey;
+}
+.dataDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap:2rem;
+}
+.dataDiv div{
+  background-color: white;
+  padding: .6rem;
+  border-radius: 1rem;
+}
+
+.loading{
+  width: 2rem;
+  height: 2rem;
+  background-image: linear-gradient(to Left,rgb(121, 160, 222),blue);
+  border-radius: 50%;
+  animation: spin 2s ease-in infinite;
+}
+@keyframes spin {
+  10%{
+    transform: rotate(90deg) ;;
+  }
+  50%{
+    transform: rotate(180) ;
+  }
+  80%{
+    transform: rotate(270)
+  }
+
 }

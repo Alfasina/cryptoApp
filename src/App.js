@@ -1,22 +1,35 @@
 import './App.css';
+import CoinData from './components/CoinData';
 import Datacards from './components/datacards';
 import Insight from './components/insight';
-import { Navbar } from './components/navbar';
-import { useHomeContext } from './contexts/homeContext';
-const {state}=useHomeContext
-function App() {
+import  { Navbar } from './components/navbar';
+import Side from './components/Side';
+import { XConceptProvider} from './contexts/trialContext';
+import { HomeProvider} from './contexts/homeContext';
+import { CardContainer } from './components/cardContainer';
 
+
+function App() {
+ 
   return (
     <div className="App">
+      <HomeProvider>
       <Navbar/>
-      <section className='cardContainer'>
-{[1,2,2,2].map(( x, i)=><Datacards key={i}/>) }
-      </section>
+      <div className='flowDiv'>
+      <XConceptProvider>
+      <Side/>
+      </XConceptProvider>
+      <main>
+       
+      <CardContainer/>
       <section className='dataDiv'>
       <Insight/>
-
+      <CoinData />
       </section>
       
+      </main>
+      </div>
+      </HomeProvider>
     </div>
   );
 }
