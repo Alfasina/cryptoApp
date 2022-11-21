@@ -1,39 +1,38 @@
 .App{
   background-color: rgb(226, 229, 237);
-  
+  min-height: 100vh;
 }
 .card{
   background-color: aliceblue;
   border-radius: 6px;
   flex-direction: column;
-  width:22%;
   padding-left:.6rem ;
   color: #00008B; 
+  flex:1;
 }
 section{
   border-radius: 1.5rem;
-  
 }
 li{
   list-style: none;
 }
 .cardContainer{
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
+  align-items: center;
   gap:1rem;
   padding: 1rem;
   background-color: white;
 }
+.searchInput{
+  width: 84%;
+}
 .navBar{
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: .7rem 3rem;
 }
-.navBar input{
+.autocomplete{
   width: 50%;
-  padding:.5rem;
   border: none;
   border-radius: .3rem;
 }
@@ -42,9 +41,9 @@ li{
   margin:2px;
 }
 .active{
-  color:#12129b;
-  border-bottom: green solid 3px;
-  font-weight: 700;
+  color:#00008B;
+  border-bottom: #00008B solid 3px;
+  font-weight: 600;
   margin:2px;
 }
 .flowDiv{
@@ -85,21 +84,61 @@ main{
 }
 
 .loading{
-  width: 2rem;
-  height: 2rem;
-  background-image: linear-gradient(to Left,rgb(121, 160, 222),blue);
+  width: 10px;
+  height: 10px;
+  background-image: radial-gradient(rgb(121, 160, 222),blue);
   border-radius: 50%;
-  animation: spin 2s ease-in infinite;
+  animation: spin 1s ease-in infinite;
+}
+tr th, tr td{
+  padding: .25rem 1rem;
+  text-align: left;
+}
+tbody tr:nth-child(odd){
+  background-color: aliceblue;
+}
+.newsDiv{
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.newsLink{
+  
+  text-decoration: none;
+  color:black;
+  display: flex;
+}
+.cardLink{
+  flex-basis: 18%;
+  background-color: aliceblue;
+  border-radius:6px ;
+  padding:.5rem;
+  text-align: center;
+}
+
+.active {
+  background: lightgray;
+}
+
+.newsInnerDiv{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+pre{
+  color: #12129b;
+  border-radius: 1rem;
+  background-color: aliceblue;
+  color: #00008B;
+  width: fit-content;
 }
 @keyframes spin {
   10%{
-    transform: rotate(90deg) ;;
-  }
-  50%{
-    transform: rotate(180) ;
-  }
-  80%{
-    transform: rotate(270)
-  }
-
+    transform: rotate(90deg) ;}
+100%{
+  transform:rotate(360)
+}
 }

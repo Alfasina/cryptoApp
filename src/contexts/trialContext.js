@@ -23,7 +23,7 @@ switch(action.type){
 
 
 const  XConceptProvider=({children})=>{
-        const side=['Home', 'Away' ,'start', 'stop']
+        const side=['Home', 'News & Updates' ,'Tokens', 'Trades']
     const [state, dispatch]=useReducer(reducer,side)
     const Add =(x)=>{
         dispatch({

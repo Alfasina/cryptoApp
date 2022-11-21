@@ -1,4 +1,5 @@
 import React from 'react';
+import BarChart from './barChart';
 import InnerDivHeader from './innerDivHeader';
 
 const Insight = () => {
@@ -6,9 +7,9 @@ const Insight = () => {
   return (
     <div style={{width:'60%',borderRadius:'1rem'}}>
      <InnerDivHeader {...data} />
-      <div>
-            generate barChart with ChartJs
-      </div>
+      
+      <BarChart/>
+      
     </div>
   );
 }

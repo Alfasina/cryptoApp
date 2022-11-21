@@ -13,13 +13,13 @@ const CoinData = () => {
     <div style={{width:'35%'}}>
       <InnerDivHeader {...data1}/>
       <table>
-      <thead><tr><th></th><th>Coin</th><th>Market cap</th><th>Current Price</th></tr></thead>
+      <thead><tr style={{color: '#00008B'}}><th></th><th>COIN</th><th>MARKET CAP</th><th>CURRENT PRICE</th></tr></thead>
       <tbody>
-      {data.coins.filter((coin)=>coin.rank<6).map((coin)=>{
-const {uuid,rank, symbol, name,marketCap, price}=coin
+      {data.coins.filter((coin)=>coin.rank<11).map((coin)=>{
+const {uuid,rank, symbol,marketCap, price}=coin
 return<tr key={uuid}> 
 <td>{rank}</td>
-<td>{name}</td>
+<td>{symbol}</td>
 <td>{millify(marketCap)}</td>
 <td>{millify(price)}</td>
 </tr>

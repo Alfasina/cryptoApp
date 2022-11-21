@@ -28,7 +28,6 @@ const HomeProvider = ({children}) => {
           }; 
           axios.request(options).then(function (response) {
              loading(response.data)
-             console.log(state)
 
           }).catch(function (error) {
               alert(error);
