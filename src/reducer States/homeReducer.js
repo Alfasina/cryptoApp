@@ -7,7 +7,6 @@ return{...action.payload}
 default:
 
 }
-console.log(state)
 
 
 }

@@ -1,6 +1,7 @@
 import{GrNotification,GrSettingsOption} from 'react-icons/gr'
 import { useHomeContext } from '../contexts/homeContext'
 import Autocomplete from './Autocomplete'
+import logo from '../images/cryptoLogo.png'
 export const Navbar=()=>{
     const {data}=useHomeContext()
     var z=[]
@@ -12,7 +13,7 @@ export const Navbar=()=>{
             })}
    
     return(<nav className="navBar">
-        <div>Logo</div>
+        <div><p className='brand'><img src={logo} className='logo' alt='logo'/>SaintXchange</p></div>
         <Autocomplete data={z}/>
         <div><button className="btn"><GrNotification className='icon' /></button><button className="btn"><GrSettingsOption className='icon' /></button> </div>  
     </nav>)

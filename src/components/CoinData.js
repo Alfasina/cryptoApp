@@ -4,8 +4,11 @@ import { useHomeContext } from '../contexts/homeContext';
 import Loading from './loading';
 import millify from "millify";
 
-const CoinData = () => {
+const CoinData = (simplified) => {
   const {data} =useHomeContext()
+  let coinsDetails
+  if(simplified){ coinsDetails=data.coins.filter((coin)=>coin.rank<11)}
+  else {coinsDetails=data.coins}
   
     const data1={x1:'Volume', x2:'Trades', x3:'More insights'}
   return (<>
@@ -15,7 +18,7 @@ const CoinData = () => {
       <table>
       <thead><tr style={{color: '#00008B'}}><th></th><th>COIN</th><th>MARKET CAP</th><th>CURRENT PRICE</th></tr></thead>
       <tbody>
-      {data.coins.filter((coin)=>coin.rank<11).map((coin)=>{
+      {coinsDetails.map((coin)=>{
 const {uuid,rank, symbol,marketCap, price}=coin
 return<tr key={uuid}> 
 <td>{rank}</td>

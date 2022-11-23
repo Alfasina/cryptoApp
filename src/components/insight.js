@@ -8,7 +8,7 @@ const Insight = () => {
     <div style={{width:'60%',borderRadius:'1rem'}}>
      <InnerDivHeader {...data} />
       
-      <BarChart/>
+      <BarChart simplified={true}/>
       
     </div>
   );

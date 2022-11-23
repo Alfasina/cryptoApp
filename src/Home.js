@@ -9,21 +9,21 @@ import News from './components/News';
 
 
 
-
 const Home = () => {
     const {data}=useHomeContext()
 
-   
+  
+
   return (
     <>
      {!data ? <Loading/> :<>
       <CardContainer/>
       <section className='dataDiv'>
-      <Insight/>
-      <CoinData />
+      <Insight simplified={true}/>
+      <CoinData simplified={true}/>
       </section>
       <NewsProvider>
-        <News/>
+        <News simplified={true}/>
       </NewsProvider>
       </>}
     </>
